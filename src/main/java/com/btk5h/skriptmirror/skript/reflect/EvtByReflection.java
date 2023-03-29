@@ -92,10 +92,6 @@ public class EvtByReflection extends SelfRegisteringSkriptEvent {
       JavaType javaType = javaTypes[i];
       Class<?> clazz = javaType.getJavaClass();
 
-      if (!Event.class.isAssignableFrom(clazz)) {
-        Skript.error(clazz.getSimpleName() + " is not a Bukkit event");
-        return false;
-      }
 
       classes[i] = (Class<? extends Event>) clazz;
     }
